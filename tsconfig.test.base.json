@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "types": ["mocha", "chai", "sinon", "node"],
+    "esModuleInterop": true,
+    "allowJs": true,
+    "checkJs": false,
+    "module": "commonjs",
+    "target": "es2018",
+    "strict": false,
+    "noImplicitAny": false,
+    "verbatimModuleSyntax": false,
+    "noEmit": true
+  }
+}

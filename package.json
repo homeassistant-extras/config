@@ -1,0 +1,73 @@
+{
+  "name": "@homeassistant-extras/config",
+  "version": "0.1.0",
+  "author": {
+    "name": "Patrick Masters",
+    "url": "https://github.com/homeassistant-extras"
+  },
+  "license": "ISC",
+  "description": "Shared ESLint, Prettier, TypeScript, Mocha, and NYC config for homeassistant-extras custom cards.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/homeassistant-extras/config.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    "./prettier": "./prettier.config.json",
+    "./nyc": "./nyc.json",
+    "./tsconfig.base.json": "./tsconfig.base.json",
+    "./tsconfig.test.base.json": "./tsconfig.test.base.json",
+    "./mocharc.card.json": "./mocharc.card.json",
+    "./mocharc.library.json": "./mocharc.library.json",
+    "./mocha/setup.card": "./mocha/setup.card.cjs",
+    "./mocha/setup.library": "./mocha/setup.library.cjs",
+    "./eslint/card": "./eslint/card.mjs",
+    "./eslint/library": "./eslint/library.mjs"
+  },
+  "files": [
+    "eslint",
+    "mocha",
+    "prettier.config.json",
+    "nyc.json",
+    "tsconfig.base.json",
+    "tsconfig.test.base.json",
+    "mocharc.card.json",
+    "mocharc.library.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "jsdom": "^29.1.1"
+  },
+  "peerDependencies": {
+    "@eslint/js": "^10.0.0",
+    "eslint": "^10.0.0",
+    "eslint-plugin-lit": "^2.0.0",
+    "eslint-plugin-wc": "^3.0.0",
+    "globals": "^17.0.0",
+    "typescript-eslint": "^8.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@eslint/js": {
+      "optional": true
+    },
+    "eslint": {
+      "optional": true
+    },
+    "eslint-plugin-lit": {
+      "optional": true
+    },
+    "eslint-plugin-wc": {
+      "optional": true
+    },
+    "globals": {
+      "optional": true
+    },
+    "typescript-eslint": {
+      "optional": true
+    }
+  }
+}
