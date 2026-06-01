@@ -6,12 +6,12 @@ const dom = new JSDOM("<!DOCTYPE html><html><body></body></html>", {
 });
 
 globalThis.window = dom.window;
+globalThis.Node = dom.window.Node;
 globalThis.document = dom.window.document;
 globalThis.HTMLElement = dom.window.HTMLElement;
-globalThis.Node = dom.window.Node;
 globalThis.customElements = dom.window.customElements;
-globalThis.requestAnimationFrame = (callback) => setTimeout(callback, 0);
 globalThis.dispatchEvent = dom.window.dispatchEvent.bind(dom.window);
+globalThis.requestAnimationFrame = (callback) => setTimeout(callback, 0);
 
 globalThis.window.matchMedia =
   globalThis.window.matchMedia ||
@@ -25,3 +25,7 @@ globalThis.window.matchMedia =
     removeEventListener: () => {},
     dispatchEvent: () => false,
   }));
+
+// Chai must initialize before this; its PluginEvent is not a jsdom Event.
+require("chai");
+globalThis.Event = dom.window.Event;
