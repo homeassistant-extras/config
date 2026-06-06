@@ -11,6 +11,7 @@ globalThis.document = dom.window.document;
 globalThis.HTMLElement = dom.window.HTMLElement;
 globalThis.customElements = dom.window.customElements;
 globalThis.dispatchEvent = dom.window.dispatchEvent.bind(dom.window);
+globalThis.requestAnimationFrame = (callback) => setTimeout(callback, 0);
 globalThis.addEventListener = dom.window.addEventListener.bind(dom.window);
 globalThis.removeEventListener = dom.window.removeEventListener.bind(
   dom.window,

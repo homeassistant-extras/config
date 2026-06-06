@@ -1,6 +1,6 @@
 {
   "name": "@homeassistant-extras/config",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": {
     "name": "Patrick Masters",
     "url": "https://github.com/homeassistant-extras"
@@ -39,6 +39,10 @@
     "mocharc.library.json",
     "README.md"
   ],
+  "scripts": {
+    "update": "npx npm-check-updates -u && yarn install",
+    "publish": "npm publish"
+  },
   "dependencies": {
     "jsdom": "^29.1.1"
   },
